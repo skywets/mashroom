@@ -8,10 +8,15 @@ public class Main {
         // write your code her
 
 
+Tournament tournament =new Tournament();
+tournament.point();
+//
+//        mushroomPicker.display();
+//        System.out.println();
+//        mushroomPicker1.display();
+//        System.out.println();
+//        mushroomPicker2.display();
 
-        MushroomPicker mushroomPicker = new MushroomPicker("Petya", 35);
-        mushroomPicker.collectMushroom(new Forest());
-        mushroomPicker.display();
 
     }
 }

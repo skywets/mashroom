@@ -20,8 +20,7 @@ public class Forest {
 
     public Mushroom randomMushroom(){
         Random random = new Random();
-        Mushroom mushroom;
-        mushroom =  mushrooms.get(random.nextInt(mushrooms.size()));
+        Mushroom mushroom =  mushrooms.get(random.nextInt(mushrooms.size()));
         return mushroom;
     }
 
