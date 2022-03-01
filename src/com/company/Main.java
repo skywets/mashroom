@@ -8,7 +8,8 @@ public class Main {
         // write your code her
 
 
-
+Tournament tournament =new Tournament();
+tournament.point();
 //
 //        mushroomPicker.display();
 //        System.out.println();
@@ -16,10 +17,6 @@ public class Main {
 //        System.out.println();
 //        mushroomPicker2.display();
 
-
-    }
-
-    public void tournament() {
 
     }
 }

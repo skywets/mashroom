@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.*;
+
 public class Tournament {
     MushroomPicker mushroomPicker = new MushroomPicker("Petya", 35);
     MushroomPicker mushroomPicker1 = new MushroomPicker("Petya", 35);
@@ -13,13 +15,17 @@ public class Tournament {
         mushroomPicker.remove();
         mushroomPicker1.remove();
         mushroomPicker2.remove();
+
     }
 
     public void point() {
-        for (Object item: mushroomPicker.getBasket()) {
-            int point=0;
-            point++;
-        }
+        List point = new ArrayList<>();
+        point.add(mushroomPicker.getBasket().size());
+        point.add(mushroomPicker1.getBasket().size());
+        point.add(mushroomPicker2.getBasket().size());
+        Collections.sort(point);
+        System.out.println(point);
     }
+
 
 }
