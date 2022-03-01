@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Tournament {
     MushroomPicker mushroomPicker = new MushroomPicker("Petya", 35);
@@ -19,12 +20,14 @@ public class Tournament {
     }
 
     public void point() {
-        List point = new ArrayList<>();
+        List<Integer> point = new ArrayList<>();
         point.add(mushroomPicker.getBasket().size());
         point.add(mushroomPicker1.getBasket().size());
         point.add(mushroomPicker2.getBasket().size());
-        Collections.sort(point);
-        System.out.println(point);
+        List<Integer> sortedPoint = point.stream()
+                        .sorted(Collections.reverseOrder())
+                                .collect(Collectors.toList());
+        System.out.println(sortedPoint);
     }
 
 
