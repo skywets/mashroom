@@ -9,9 +9,17 @@ public class Main {
 
 
 
-        MushroomPicker mushroomPicker = new MushroomPicker("Petya", 35);
-        mushroomPicker.collectMushroom(new Forest());
-        mushroomPicker.display();
+//
+//        mushroomPicker.display();
+//        System.out.println();
+//        mushroomPicker1.display();
+//        System.out.println();
+//        mushroomPicker2.display();
+
+
+    }
+
+    public void tournament() {
 
     }
 }

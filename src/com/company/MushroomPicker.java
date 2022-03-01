@@ -1,8 +1,8 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 
 public class MushroomPicker {
 
@@ -20,8 +20,14 @@ public class MushroomPicker {
 
     public void collectMushroom(Forest forest) {
         Mushroom mushroom = forest.randomMushroom();
-        if (skill > 1 && mushroom.isEdible()) {
-            basket.add(mushroom);
+        basket.add(mushroom);
+    }
+
+    public void remove() {
+        for (int i = 0; i < basket.size(); i++) {
+            if (this.skill > 1 && !basket.get(i).isEdible()){
+                basket.remove(i);
+            }
         }
     }
 
@@ -29,4 +35,11 @@ public class MushroomPicker {
         System.out.println(basket);
     }
 
+    public List<Mushroom> getBasket() {
+        return basket;
+    }
+
+    public void setBasket(List<Mushroom> basket) {
+        this.basket = basket;
+    }
 }
