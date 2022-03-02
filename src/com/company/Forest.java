@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Random;
 
 public class Forest {
-
-
+    
+    Random random = new Random();
     List<Mushroom> mushrooms = mushrooms = new ArrayList<>();
 
     public Forest() {
@@ -19,9 +19,7 @@ public class Forest {
     }
 
     public Mushroom randomMushroom(){
-        Random random = new Random();
-        Mushroom mushroom =  mushrooms.get(random.nextInt(mushrooms.size()));
-        return mushroom;
+        return mushrooms.get(random.nextInt(mushrooms.size()));
     }
 
     @Override

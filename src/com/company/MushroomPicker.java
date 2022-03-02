@@ -14,7 +14,7 @@ public class MushroomPicker {
     public MushroomPicker(String name, int age) {
         this.age = age;
         this.name = name;
-        this.skill = skill = Math.random()*5;
+        this.skill = Math.random()*5;
         this.basket = new ArrayList<>();
     }
 
@@ -27,6 +27,7 @@ public class MushroomPicker {
         for (int i = 0; i < basket.size(); i++) {
             if (this.skill > 1 && !basket.get(i).isEdible()){
                 basket.remove(i);
+                i--;
             }
         }
     }
@@ -41,5 +42,40 @@ public class MushroomPicker {
 
     public void setBasket(List<Mushroom> basket) {
         this.basket = basket;
+    }
+
+    @Override
+    public String toString() {
+        return "MushroomPicker{" +
+                "name='" + name + '\'' +
+                ", skill=" + skill +
+                ", age=" + age +
+                ", size=" + basket.size() +
+                ", basket=" + basket +
+                "}\n";
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getSkill() {
+        return skill;
+    }
+
+    public void setSkill(double skill) {
+        this.skill = skill;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
